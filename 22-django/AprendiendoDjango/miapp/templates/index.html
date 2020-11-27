@@ -1,10 +1,45 @@
 
 {% extends 'layout.html' %}
 
-{% block title %} Inicio Django {% endblock %}
+{% block title %} {{title}} {% endblock %}
 
 {% block content %}
 
-<h1 class="title">Inicio</h1>
-<p> Años hasta 2050: </p>
+
+{% comment ' esto Es un comentario' %}
+
+Esto es un comentario también
+
+{% endcomment %}
+
+{% include 'fecha_actual.html' with saludo="Hola mundo desde plantilla" %}
+
+<h1 class="title">{{title}}</h1>
+
+<p> {{ mi_variable }}</p>
+
+{% if nombre and nombre == 'Greivin Cruz Ríos' %}
+    <p> {{ nombre }}</p>
+{% else %}
+    <strong> nombre no existe o no coincide</strong>
+{% endif %}
+
+{{mi_lista}}
+
+<h3> Listado de lenguajes de programación </h3>
+
+<ul>
+{% for lenguaje in lenguajes %}
+
+    <li>{{ lenguaje }} {{forloop.counter}}</li>
+
+{% empty %}
+    <p> No hay lenguajes que mostrar </p>
+
+{% endfor %}
+
+</ul>
+
+
+
 {%endblock%}

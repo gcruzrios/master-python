@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title%}
         <!-- Titulo de página-->
-        {% endblock %} | Greivin Cruz</title>
-     <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>  
+        {% endblock %} | Greivin Cruz
+    </title>
+    
+    
+    {% load static%}
+    
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>  
 </head>
 
 <body>
@@ -25,30 +30,39 @@
     <nav>
         <ul>
             <li>
-                <a href="/inicio">Inicio</a>
-            </li>    
+                <a href="{% url 'inicio' %}">Inicio</a>
+            </li>
             <li>
-                <a href="/hola-mundo">Hola Mundo</a>
+                <a href="{% url 'articulos' %}">Artículos</a>
+            </li>   
+            <li>
+                <a href="{% url 'create' %}">Crear Artículos</a>
+            </li>
+            <li>
+                <a href="{% url 'create_full' %}">Crear Full Artículos</a>
+            </li>  
+            <li>
+                <a href="{% url 'hola_mundo' %}">Hola Mundo</a>
             </li> 
             <li>
-                <a href="/pagina-pruebas">Pagina de Pruebas</a>
+                <a href="{% url 'pagina' %}">Pagina de Pruebas</a>
             </li>  
              <li>
-                <a href="/contacto">Contacto</a>
+                <a href="{% url 'contacto' 'Greivin' 'Cruz' %}">Contacto</a>
             </li> 
         </ul>
 
     </nav>
-
+    
     <div class="barra">
 
-        <span class="esquina-izquierda"></span>
+        <span class="esquina-izquierda"></span> 
 
         <span class="relleno-barra"></span>
 
-        <span class="esquina-derecha"></span>
+        <span class="esquina-derecha"></span> 
     </div>
-
+ 
     <!--
     
     <h1>Sitio web con Django | Greivin Cruz </h1>
@@ -59,7 +73,7 @@
 
    <div id="content">
        <div class="box">
-            <h2 class="title"> titulo de prueba </h2>
+            
             {% block content%}
                 <!-- Código que viene templates-->
                 <strong>Contenido del bloque original <strong>
@@ -70,7 +84,7 @@
     </div>
     
     <footer>
-        MaSTER En Python &copy; Greivin Cruz 2020
+        MaSTER En Python &copy; Greivin Cruz - {% now "d/m/Y" %}
     </footer>
 </body>
 </html>

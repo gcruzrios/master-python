@@ -9,12 +9,25 @@
 
 }   
 
+p,h2,h3, ul{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+ul,ol{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
 
 body{
     background-color: #f2f2f2;
 
 }
 
+.clearfix{
+    clear:both;
+    float:none;
+}
 /* Estilos cabecera */
 
 header{
@@ -72,7 +85,7 @@ nav ul{
 }
 
 nav ul li{
-    line-height: 40px;
+    line-height: 30px;
     float:left;
 }
 
@@ -94,7 +107,7 @@ nav ul li a:hover {
 .barra{
     width: 1250px;
     margin: 0 auto;
-    
+    margin-bottom: 20px;
 }
 
 .esquina-izquierda{
@@ -139,6 +152,54 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
+.box form{
+    width: 40%;
+
+}
+
+.box form input,
+.box form label{
+    display: block;
+    padding: 5px;
+    padding-left: 0px;
+}
+
+.box form input[type="text"],
+.box form textarea,
+.box form select
+{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.box form select {
+    width: 100px;
+    padding: 5px;
+}   
+
+.box form input[type="submit"],
+.box form input[type="button"],
+.box form button{
+    padding:10px;
+    margin-top: 5px;
+    background: #2ba977;
+    border: 1px solid #444;
+    color: white;
+    transition: 300ms all;
+}
+
+.box form input[type="submit"]:hover,
+.box form input[type="button"]:hover,
+.box form button:hover{
+   
+    background: #1f7e58;
+    border: 1px solid #444;
+    color: white;
+    
+    cursor: pointer;
+}
+
+
 .title{
     color: #444444;
     letter-spacing: 1px;
@@ -147,6 +208,56 @@ nav ul li a:hover {
     margin-top: 5px;
 }
 
+.article-item{
+    margin-bottom: 40px;
+    margin-top: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    clear: both;
+}
+
+.article-item .image{
+    float: left;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.article-item .image img{
+   height: 200px;
+}  
+
+.article-item .data{
+    padding-top: 0px;
+    float: left;
+    padding: 15px;
+}
+
+.article-item h2{
+
+    display: block;
+    font-size: 30px;
+    color:#333;
+    margin-bottom: 10px;
+}
+
+.article-item span.data{
+    display:block;
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.btn{
+    padding:10px;
+    background: red;
+    color: white;
+    border:1px solid black;
+    display: block;
+    margin-top: 20px;
+    width: 120px;
+    text-align: center;
+}
 footer{ 
     width: 1250px;
     background-color: #1B1E1F;
@@ -157,9 +268,17 @@ footer{
     padding-top: 10px;
     padding-bottom: 10px;
     box-shadow: 0px 0px 20px gray;
+}
 
+.rojo{
+    color: red;
+    box-shadow: 0px 0px 4px black;
+}
 
-
-
-
+.message{
+    padding:20px;
+    background: #1f7e58;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
 }
